@@ -1,0 +1,11 @@
+#codHead {
+    position: sticky;
+    top: 0;
+    height: 60px;
+}
+
+.scroll_header{
+    background-color: beige;
+    border-bottom: 1px solid beige;
+    opacity: 60%;
+}
