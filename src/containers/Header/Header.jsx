@@ -1,7 +1,7 @@
 import "./Header.css"
 import { useState,useEffect } from "react";
 
-const Header = () => {
+const Header = (props) => {
 
     const [ScrollY, setScrollY] = useState(0); // window 의 pageYOffset값을 저장
     const [ScrollActive, setScrollActive] = useState(false);
@@ -28,8 +28,12 @@ const Header = () => {
     return (
         <header id="codHead" className={ScrollActive? "scroll_header":""}>
             Header
+            <button onClick={() => props.setData("open")}>
+                open
+            </button>
+
         </header>
-        );
+    );
   };
   
   export default Header;

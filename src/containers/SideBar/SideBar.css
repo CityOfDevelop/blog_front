@@ -1,0 +1,17 @@
+#sideMenu {
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    height: 100%;
+    margin-left: -261px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+    width: 260px;
+    z-index: 10000;
+}
+
+#sideMenu.open {
+    margin-left: 0px;
+}
