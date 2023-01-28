@@ -1,5 +1,9 @@
 .dcMain {
-    width: 960px;
-    height: 50000px;
-    margin: 0 auto;
+  width: 960px;
+  height: 50000px;
+  margin: 0 auto;
+}
+.dc_title {
+  font-size: 40px;
+  font-weight: 400;
 }

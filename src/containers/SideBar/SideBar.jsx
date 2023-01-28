@@ -1,20 +1,13 @@
-import "./SideBar.css"
-import { useState } from "react";
+import "./SideBar.css";
 
 const SideBar = (props) => {
-    const [Active,setActive] = useState(props.active);
-    
-    function sideClose() {
-        setActive("");
-    }
-
-    return (
-        <div id="sideMenu" className={Active}>
-            <div className="side">
-                <button onClick={sideClose}>close</button>
-            </div>
-        </div>
-    );
+  return (
+    <div id="sideMenu" className={props.active ? "open" : null}>
+      <div className="side">
+        <button onClick={props.sideClose}>close</button>
+      </div>
+    </div>
+  );
 };
 
 export default SideBar;
