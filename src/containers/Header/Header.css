@@ -12,22 +12,25 @@
 }
 
 #test {
-  width: 26px;
-  height: 26px;
+  font-size: 1.5rem;
 }
 
 #btn_sidebar_open {
   background-color: white;
   border: 0;
-
   width: 26px;
-  height: 26px;
+  height: 30px;
   margin-right: 14px;
+}
+
+#btn_sidebar_open {
+    cursor: pointer;
 }
 
 #logo_home {
   width: 72px;
-  height: 26px;
+  height: 30px;
+  line-height: 30px;
   text-decoration: none;
   color: burlywood;
   font-weight: 500;
@@ -36,10 +39,29 @@
 
 #header_left {
   width: 100px;
-  height: 24px;
+  height: 30px;
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: auto;
   margin-left: 20px;
-  z-index: 9999;
+}
+
+#header_right {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: 20px;
+}
+.btn_login {
+    width: 66px;
+    height: 30px;
+    border: 1px solid #666;
+    border-radius: 16px;
+    background: none;
+}
+
+.btn_login:hover {
+    cursor: pointer;
 }

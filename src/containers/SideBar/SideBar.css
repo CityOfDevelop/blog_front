@@ -15,3 +15,50 @@
 #sideMenu.open {
     margin-left: 0px;
 }
+
+#side_main {
+    width: 260px;
+    height: 200px;
+    border-bottom: 1px solid #ddd;
+}
+
+#side_cate {
+
+}
+
+#side_close {
+    position: absolute;
+    right: -30px;
+    top: 45%;
+    z-index: 0;
+
+}
+
+#side_close.open {
+
+}
+
+#side_close.close {
+    display: none;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+#btn_side_close {
+    border: 0px;
+    background: none;
+}
+
+.icn_close {
+    font-size: 1.5rem;
+}
+
+.side_main_logo {
+    width: 48px;
+    height: 48px;
+    margin: 40px auto 9px;
+}
+
+.side_main_bottom {
+    font-size: 13px;
+}

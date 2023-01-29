@@ -1,9 +1,10 @@
 .dcMain {
-  width: 960px;
-  height: 50000px;
-  margin: 0 auto;
+    width: 960px;
+    height: 50000px;
+    margin: 0 auto;
 }
-.dc_title {
-  font-size: 40px;
-  font-weight: 400;
+
+.dc_wrap {
+    width: 100%;
+    min-width: 768px;
 }
