@@ -2,7 +2,7 @@ import "./Header.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
-import axios from 'axios';
+import axios from "axios";
 
 const Header = (props) => {
   const [ScrollY, setScrollY] = useState(0); // window 의 pageYOffset값을 저장
@@ -27,9 +27,9 @@ const Header = (props) => {
     }; //  window 에서 스크롤을 감시를 종료
   });
 
-  function login() {
-    axios.get('http://localhost:8080/test').then((Response) => {console.log(Response.data)})
-  } 
+  // function login() {
+  //   axios.get('http://localhost:8080/test').then((Response) => {console.log(Response.data)})
+  // }
 
   return (
     <header id="dcHead" className={ScrollActive ? "scroll_header" : ""}>
@@ -42,7 +42,9 @@ const Header = (props) => {
         </Link>
       </div>
       <div id="header_right">
-        <button className="btn_login" onClick={login}>로그인</button>
+        <Link to="/login">
+          <button className="btn_login">로그인</button>
+        </Link>
       </div>
     </header>
   );
