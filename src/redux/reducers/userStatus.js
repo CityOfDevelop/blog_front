@@ -2,11 +2,12 @@
 
 // reducer가 많아지면 action상수가 중복될 수 있으니
 // 액션이름 앞에 파일 이름을 넣습니다.
-export const LOGON = "USERSTATUS/LOGON";
-export const LOGOFF = "USERSTATUS/LOGOFF";
+export const CHANGE_STATUS = "USERSTATUS/CHANGE_STATUS";
 
-export const changeStatusOn = (userStatus) => ({ type: LOGON, userStatus });
-export const changeStatusOff = (userStatus) => ({ type: LOGOFF, userStatus });
+export const changeStatusOn = (userStatus) => ({
+  type: CHANGE_STATUS,
+  userStatus,
+});
 
 const initalState = {
   userStatus: "off",
@@ -14,12 +15,7 @@ const initalState = {
 
 const userStatus = (state = initalState, action) => {
   switch (action.type) {
-    case LOGON:
-      return {
-        ...state,
-        userStatus: action.userStatus,
-      };
-    case LOGOFF:
+    case CHANGE_STATUS:
       return {
         ...state,
         userStatus: action.userStatus,
@@ -30,3 +26,5 @@ const userStatus = (state = initalState, action) => {
       return state;
   }
 };
+
+export default userStatus;

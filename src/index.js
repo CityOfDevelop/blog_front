@@ -10,7 +10,7 @@ import { Provider } from "react-redux";
 import logger from "redux-logger";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-import rootReducer from "./reducers";
+import rootReducer from "./redux/reducers/rootReducer";
 
 const enhancer =
   process.env.NODE_ENV === "production"
