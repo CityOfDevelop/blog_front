@@ -2,11 +2,11 @@ import "./Header.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
-import axios from "axios";
 
 const Header = (props) => {
   const [ScrollY, setScrollY] = useState(0); // window 의 pageYOffset값을 저장
   const [ScrollActive, setScrollActive] = useState(false);
+
   function handleScroll() {
     if (ScrollY > 60) {
       setScrollY(window.pageYOffset);
@@ -26,10 +26,6 @@ const Header = (props) => {
       window.removeEventListener("scroll", handleScroll);
     }; //  window 에서 스크롤을 감시를 종료
   });
-
-  // function login() {
-  //   axios.get('http://localhost:8080/test').then((Response) => {console.log(Response.data)})
-  // }
 
   return (
     <header id="dcHead" className={ScrollActive ? "scroll_header" : ""}>
