@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import "./Login.css";
 import Header from "../../containers/Header/Header";
 import SideBar from "containers/SideBar/SideBar";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [active, setActive] = useState(false);
@@ -22,6 +23,8 @@ const Login = () => {
     passWord: "",
   });
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -29,7 +32,13 @@ const Login = () => {
         params: values,
       })
       .then((Response) => {
-        console.log(Response.data);
+        console.log(Response);
+        if (Response.status == "200" && Response.data != "") {
+          navigate("/");
+        } else {
+          setValues({ userId: "", passWord: "" });
+          alert("아이디or비번 확인해주세요");
+        }
       });
   };
 
