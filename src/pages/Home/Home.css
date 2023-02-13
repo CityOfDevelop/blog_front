@@ -1,10 +1,10 @@
-.dcMain {
-    width: 960px;
-    height: 50000px;
-    margin: 0 auto;
+.dc_main {
+  width: 960px;
+  height: 50000px;
+  margin: 0 auto;
 }
 
 .dc_wrap {
-    width: 100%;
-    min-width: 768px;
+  width: 100%;
+  min-width: 768px;
 }

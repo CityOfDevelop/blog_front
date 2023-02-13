@@ -17,7 +17,7 @@ const Home = () => {
     <div className="dc_wrap">
       <Header sideOpen={sideOpen} />
       <SideBar sideClose={sideClose} active={active} />
-      <div className="dcMain">
+      <div className="dc_main">
         <h3 className="dc_title">개발도시</h3>
       </div>
     </div>

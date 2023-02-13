@@ -25,13 +25,9 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(
-        "http://localhost:8080/saveUserInfo",
-        JSON.stringify(values, null),
-        {
-          headers: { "Content-Type": `application/json` },
-        }
-      )
+      .get("http://localhost:8080/login", {
+        params: values,
+      })
       .then((Response) => {
         console.log(Response.data);
       });
@@ -58,7 +54,7 @@ const Login = () => {
                 type="text"
                 placeholder="id"
                 name="userId"
-                value={values.id}
+                value={values.userId}
                 onChange={handleChange}
               />
               <Form.Text className="text-muted"></Form.Text>
