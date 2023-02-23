@@ -1,0 +1,27 @@
+li {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap_board {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 700px;
+  height: 100vh;
+}
+
+.board_list {
+  width: 700px;
+  height: 200px;
+}
+
+.board_list_item {
+  margin-top: 7px;
+  border-bottom: 1px solid #eee;
+  padding: 24px 0 27px;
+}
