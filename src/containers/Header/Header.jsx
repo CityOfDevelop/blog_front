@@ -28,7 +28,7 @@ const Header = (props) => {
   });
 
   return (
-    <header id="dcHead" className={ScrollActive ? "scroll_header" : ""}>
+    <header id="dc_head" className={ScrollActive ? "scroll_header" : ""}>
       <div id="header_left">
         <button id="btn_sidebar_open" onClick={props.sideOpen}>
           <HiMenu id="test" />
@@ -37,6 +37,7 @@ const Header = (props) => {
           devcity
         </Link>
       </div>
+      <div id="header_center">{props.name}</div>
       <div id="header_right">
         <Link to="/login">
           <button className="btn_login">로그인</button>

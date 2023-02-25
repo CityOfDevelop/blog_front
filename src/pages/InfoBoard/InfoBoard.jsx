@@ -109,7 +109,7 @@ const InfoBoard = () => {
 
   return (
     <div className="dc_wrap">
-      <Header sideOpen={sideOpen} />
+      <Header sideOpen={sideOpen} name="정보게시판" />
       <SideBar sideClose={sideClose} active={active} />
       <FeedList testData={testData1} />
       {/* 나중에 리스트 데이터 생기면 조회한 리스트 데이터로 리스트 생성  */}
