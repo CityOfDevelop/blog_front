@@ -18,7 +18,7 @@ const Home = () => {
       <Header sideOpen={sideOpen} />
       <SideBar sideClose={sideClose} active={active} />
       <div className="dc_main">
-        <h3 className="dc_title">개발도시</h3>
+        <h3 className="dc_title">개발도시 Home</h3>
       </div>
     </div>
   );
