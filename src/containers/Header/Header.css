@@ -24,7 +24,7 @@
 }
 
 #btn_sidebar_open {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #logo_home {
@@ -47,21 +47,21 @@
 }
 
 #header_right {
-    width: 200px;
-    height: 30px;
-    display: flex;
-    margin-left: auto;
-    margin-top: auto;
-    margin-right: 20px;
+  width: 200px;
+  height: 30px;
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: 20px;
 }
 .btn_login {
-    width: 66px;
-    height: 30px;
-    border: 1px solid #666;
-    border-radius: 16px;
-    background: none;
+  width: 66px;
+  height: 30px;
+  border: 1px solid #666;
+  border-radius: 16px;
+  background: none;
 }
 
 .btn_login:hover {
-    cursor: pointer;
+  cursor: pointer;
 }

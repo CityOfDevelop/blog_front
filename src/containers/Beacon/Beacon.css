@@ -1,0 +1,155 @@
+button:active,
+button:hover,
+button:focus {
+  background: var(--button-hover-bg-color);
+  outline: 0;
+}
+
+#beacon_wrap {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+#baecon_main_frame {
+  text-align: center;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  font-size: 1.5rem;
+}
+
+#baecon_main_button {
+  width: 65px;
+  height: 65px;
+  line-height: 15px;
+  border: 0;
+  border-radius: 100px;
+  background-color: burlywood;
+}
+
+#baecon_schd_frame {
+  text-align: center;
+  position: absolute;
+  bottom: 25px;
+  right: 105px;
+  font-size: 1.5rem;
+}
+
+#baecon_schd_button {
+  width: 50px;
+  height: 50px;
+  line-height: 15px;
+  border: 0;
+  border-radius: 100px;
+  background-color: burlywood;
+}
+
+#baecon_schd_button:hover {
+  opacity: 0.8;
+  scale: 1.1;
+}
+
+#baecon_write_frame {
+  text-align: center;
+  position: absolute;
+  bottom: 85px;
+  right: 85px;
+  font-size: 1.5rem;
+}
+
+#baecon_write_button {
+  width: 50px;
+  height: 50px;
+  line-height: 15px;
+  border: 0;
+  border-radius: 100px;
+  background-color: burlywood;
+}
+
+#baecon_write_button:hover {
+  opacity: 0.8;
+  scale: 1.1;
+}
+
+#baecon_top_frame {
+  text-align: center;
+  position: absolute;
+  bottom: 105px;
+  right: 25px;
+  font-size: 1.5rem;
+}
+
+#baecon_top_button {
+  width: 50px;
+  height: 50px;
+  line-height: 15px;
+  border: 0;
+  border-radius: 100px;
+  background-color: burlywood;
+}
+
+#baecon_top_button:hover {
+  opacity: 0.8;
+  scale: 1.1;
+}
+
+.beacon_main_open {
+}
+
+.beacon_schd_open {
+  text-align: center;
+  position: absolute;
+  transform: translate(0px, 0px);
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+.beacon_write_open {
+  text-align: center;
+  position: absolute;
+  transform: translate(0px, 0px);
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+.beacon_top_open {
+  text-align: center;
+  position: absolute;
+  transform: translate(0px, 0px);
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+.beacon_main_close {
+}
+
+.beacon_schd_close {
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  transform: translate(77px, -5px);
+  transition-property: all;
+  transition-duration: 0.7s;
+}
+
+.beacon_write_close {
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  transform: translate(55px, 55px);
+  transition-property: all;
+  transition-duration: 0.7s;
+}
+
+.beacon_top_close {
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  transform: translate(-5px, 77px);
+  transition-property: all;
+  transition-duration: 0.7s;
+}
