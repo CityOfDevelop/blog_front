@@ -1,23 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import "./Login.css";
-import Header from "../../containers/Header/Header";
-import SideBar from "containers/SideBar/SideBar";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [active, setActive] = useState(false);
-
-  const sideOpen = () => {
-    setActive(true); // sidebar의 활성화 false
-  };
-
-  const sideClose = () => {
-    setActive(false); // sidebar의 활성화 false
-  };
-
   const [values, setValues] = useState({
     userId: "",
     passWord: "",
@@ -27,13 +14,14 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    document.activeElement.blur();
     axios
       .get("http://localhost:8080/login", {
         params: values,
       })
       .then((Response) => {
         console.log(Response);
-        if (Response.status == "200" && Response.data != "") {
+        if (Response.status === "200" && Response.data !== "") {
           navigate("/");
         } else {
           setValues({ userId: "", passWord: "" });
@@ -52,42 +40,59 @@ const Login = () => {
   return (
     <div>
       <div id="wrap">
-        <Header sideOpen={sideOpen} />
-        <SideBar sideClose={sideClose} active={active} />
+        <div id="login_wrap">
+          <div id="login_header">
+            <Link id="home_logo" to="/">
+              devcity
+            </Link>
+            <p>
+              회원이 아니신가요?
+              <Link id="login_to_signup" to="/SignUp">
+                회원가입 하기
+              </Link>
+            </p>
+          </div>
+          <div id="login_form_wrap">
+            <form id="login_form">
+              <div id="login_input_id">
+                {/* <label>id</label> */}
+                <input
+                  className="login_input"
+                  type="text"
+                  name="userId"
+                  value={values.userId}
+                  placeholder="아이디"
+                  onChange={handleChange}
+                ></input>
+              </div>
 
-        <div id="loginWrap">
-          <Form id="loginForm">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>ID</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="id"
-                name="userId"
-                value={values.userId}
-                onChange={handleChange}
-              />
-              <Form.Text className="text-muted"></Form.Text>
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                name="passWord"
-                type="password"
-                placeholder="Password"
-                value={values.passWord}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <Button
-              className="login_btn"
-              variant="primary"
-              type="submit"
-              onClick={handleSubmit}
-            >
-              Login
-            </Button>
-          </Form>
+              <div id="login_input_pw">
+                {/* <label>pw</label> */}
+                <input
+                  className="login_input"
+                  name="passWord"
+                  type="password"
+                  value={values.passWord}
+                  placeholder="비밀번호"
+                  onChange={handleChange}
+                ></input>
+              </div>
+              <div id="login_button_wrap">
+                <button
+                  className="login_button"
+                  variant="primary"
+                  type="submit"
+                  onClick={handleSubmit}
+                >
+                  로그인 하기
+                </button>
+                <div className="login_button_back"></div>
+              </div>
+            </form>
+            <div id="login_sns_wrap">
+              <p>SNS 간편 로그인</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

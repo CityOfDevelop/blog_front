@@ -1,17 +1,19 @@
 #dc_head {
   position: sticky;
   top: 0;
-  height: 60px;
+  height: 80px;
   display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .scroll_header {
-  background-color: hsla(0, 0%, 100%, 0.9);
+  background-color: hsla(0, 0%, 100%, 0.5);
   border-bottom: 1px solid #ddd;
-  opacity: 60%;
+  opacity: 0.9;
 }
 
-#test {
+#icon_sidebar {
   font-size: 1.5rem;
 }
 
@@ -19,7 +21,7 @@
   background-color: white;
   border: 0;
   width: 26px;
-  height: 30px;
+  height: 60px;
   margin-right: 14px;
 }
 
@@ -29,8 +31,6 @@
 
 #logo_home {
   width: 72px;
-  height: 30px;
-  line-height: 30px;
   text-decoration: none;
   color: burlywood;
   font-weight: 500;
@@ -38,8 +38,9 @@
 }
 
 #header_left {
-  width: 100px;
-  height: 30px;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
   display: flex;
   align-items: center;
   margin-top: auto;
@@ -47,13 +48,17 @@
 }
 
 #header_center {
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
 }
 
 #header_right {
   width: 200px;
-  height: 30px;
+  height: 60px;
   display: flex;
-  margin-left: auto;
+  align-items: center;
   margin-top: auto;
   margin-right: 20px;
 }

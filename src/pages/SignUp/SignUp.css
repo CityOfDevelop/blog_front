@@ -1,0 +1,82 @@
+a {
+  text-decoration: none;
+  text-decoration-color: black;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+button {
+  border: 0;
+}
+
+#wrap {
+  width: 100%;
+  min-width: 768px;
+  height: 100vh;
+}
+
+#signup_wrap {
+  width: 563px;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 91.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home_logo {
+  font-size: 48px;
+  text-decoration: none;
+  color: burlywood;
+}
+
+#signup_header {
+  height: 90px;
+  text-align: center;
+}
+
+#signup_to_login {
+  margin-left: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  color: burlywood;
+}
+
+#signup_divs_wrap {
+  width: 500px;
+  height: 450px;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#signup_devcity {
+  margin-top: 18px;
+}
+
+.signup_button {
+  width: 350px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border-radius: 0.8rem;
+  background-color: #f9f9fb;
+  justify-content: center;
+}
+
+.bs_icon {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+#btn_kakao {
+  background-color: #ffe600;
+}
+
+#btn_devcity {
+}

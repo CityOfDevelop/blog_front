@@ -8,7 +8,7 @@ const Header = (props) => {
   const [ScrollActive, setScrollActive] = useState(false);
 
   function handleScroll() {
-    if (ScrollY > 60) {
+    if (ScrollY > 80) {
       setScrollY(window.pageYOffset);
       setScrollActive(true);
     } else {
@@ -31,7 +31,7 @@ const Header = (props) => {
     <header id="dc_head" className={ScrollActive ? "scroll_header" : ""}>
       <div id="header_left">
         <button id="btn_sidebar_open" onClick={props.sideOpen}>
-          <HiMenu id="test" />
+          <HiMenu id="icon_sidebar" />
         </button>
         <Link id="logo_home" to="/">
           devcity
