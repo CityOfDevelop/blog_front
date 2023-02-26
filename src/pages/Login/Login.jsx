@@ -21,7 +21,7 @@ const Login = () => {
       })
       .then((Response) => {
         console.log(Response);
-        if (Response.status === "200" && Response.data !== "") {
+        if (Response.status == "200" && Response.data != "") {
           navigate("/");
         } else {
           setValues({ userId: "", passWord: "" });
