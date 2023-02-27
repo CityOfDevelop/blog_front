@@ -16,7 +16,7 @@ const SignUpCity = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     document.activeElement.blur();
-    // 이 부분이랑 백부분 수정 필요 코드화
+    // 이 부분이랑 백부분 수정 필요 코드로? 공통?
     axios
       .post(
         "http://localhost:8080/saveUserInfo",
@@ -29,13 +29,13 @@ const SignUpCity = () => {
         console.log(Response);
         if (
           Response.status == "200" &&
-          Response.data == "정상 처리되었습니다."
+          Response.data == "정상 처리되었습니다." // 수정필요
         ) {
-          alert(Response.data);
+          alert(Response.data); // 수정필요 이쁜걸로
           // home화면으로 이동
           navigate("/login");
         } else {
-          alert(Response.data);
+          alert(Response.data); // 수정필요 이쁜걸로
         }
       });
   };
