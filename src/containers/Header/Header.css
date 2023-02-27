@@ -62,14 +62,3 @@
   margin-top: auto;
   margin-right: 20px;
 }
-.btn_login {
-  width: 66px;
-  height: 30px;
-  border: 1px solid #666;
-  border-radius: 16px;
-  background: none;
-}
-
-.btn_login:hover {
-  cursor: pointer;
-}

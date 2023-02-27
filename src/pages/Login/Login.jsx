@@ -21,10 +21,13 @@ const Login = () => {
       })
       .then((Response) => {
         console.log(Response);
-        if (Response.status === "200" && Response.data !== "") {
+        if (Response.status == "200" && Response.data != "") {
+          localStorage.setItem("ACCESS_TOKEN", Response.data.token);
+
+          // home화면으로 이동
           navigate("/");
         } else {
-          setValues({ userId: "", passWord: "" });
+          setValues({ passWord: "" });
           alert("아이디or비번 확인해주세요");
         }
       });
