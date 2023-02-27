@@ -59,14 +59,19 @@ button {
   margin-top: 18px;
 }
 
-.signup_button {
+.signup_divs_button {
   width: 350px;
   height: 48px;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 0.8rem;
   background-color: #f9f9fb;
-  justify-content: center;
+  text-decoration: none;
+}
+
+.signup_divs_button:hover {
+  opacity: 0.9;
 }
 
 .bs_icon {
@@ -79,4 +84,9 @@ button {
 }
 
 #btn_devcity {
+  background-color: burlywood;
+}
+
+.signup_devcity_link {
+  text-decoration: none;
 }

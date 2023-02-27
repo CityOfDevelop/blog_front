@@ -49,17 +49,19 @@ const SignUp = () => {
           </div>
           <div id="signup_divs_wrap">
             <div id="signup_kakao">
-              <button id="btn_kakao" className="signup_button">
+              <button id="btn_kakao" className="signup_divs_button">
                 <RiKakaoTalkFill className="bs_icon" />
                 <span>카카오로 시작하기</span>
               </button>
             </div>
 
             <div id="signup_devcity">
-              <button id="btn_devcity" className="signup_button">
-                <RiBuilding2Fill className="bs_icon" />
-                <span>ID & PW 가입하기</span>
-              </button>
+              <Link to="/signup/devCity" className="signup_devcity_link">
+                <button id="btn_devcity" className="signup_divs_button">
+                  <RiBuilding2Fill className="bs_icon" />
+                  <span>ID & PW 가입하기</span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

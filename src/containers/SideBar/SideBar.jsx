@@ -1,6 +1,7 @@
 import "./SideBar.css";
 import { IoChevronBackOutline } from "react-icons/io5";
 import Nav from "react-bootstrap/Nav";
+import { Link } from "react-router-dom";
 
 const SideBar = (props) => {
   return (
@@ -12,10 +13,16 @@ const SideBar = (props) => {
         </div>
       </div>
       <div id="side_cate">
-        <Nav defaultActiveKey="/" className="flex-column">
-          <Nav.Link href="/">개발도시</Nav.Link>
-          <Nav.Link href="/infoboard">정보 공유 게시판</Nav.Link>
-        </Nav>
+        <li className="side_list">
+          <Link className="side_link" to="/">
+            개발도시
+          </Link>
+        </li>
+        <li className="side_list">
+          <Link className="side_link" to="/infoboard">
+            정보 공유 게시판
+          </Link>
+        </li>
       </div>
       <div id="side_close" className={props.active ? "open" : "close"}>
         <button id="btn_side_close" onClick={props.sideClose}>

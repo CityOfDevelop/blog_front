@@ -23,6 +23,8 @@ const Login = () => {
         console.log(Response);
         if (Response.status == "200" && Response.data != "") {
           localStorage.setItem("ACCESS_TOKEN", Response.data.token);
+          localStorage.setItem("NICK_NAME", Response.data.nickName);
+          localStorage.setItem("USER_ID", Response.data.userId);
 
           // home화면으로 이동
           navigate("/");

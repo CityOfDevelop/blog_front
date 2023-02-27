@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  text-decoration-color: black;
+}
+
 #sideMenu {
   background-color: #fff;
   border-right: 1px solid #ddd;
@@ -25,6 +30,10 @@
 #side_cate {
   width: 260;
   height: 500px;
+}
+
+Nav {
+  color: black;
 }
 
 #side_close {

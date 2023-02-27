@@ -1,7 +1,7 @@
-import "./LoginBtn.css";
+import "./HeaderLogin.css";
 import { Link } from "react-router-dom";
 
-const LoginBtn = (props) => {
+const HeaderLogin = (props) => {
   return (
     <div>
       <Link to="/login">
@@ -11,4 +11,4 @@ const LoginBtn = (props) => {
   );
 };
 
-export default LoginBtn;
+export default HeaderLogin;

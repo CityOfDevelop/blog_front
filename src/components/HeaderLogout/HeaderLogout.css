@@ -9,3 +9,9 @@
 .btn_logout:hover {
   cursor: pointer;
 }
+
+.header_nickname {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 10px;
+}
