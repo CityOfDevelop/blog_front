@@ -57,12 +57,12 @@ ul {
 
 #side_setting {
   width: 100%;
-  position: absolute;
   bottom: 0;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   align-items: center;
+  justify-content: center;
 }
 
 #side_close {
@@ -113,4 +113,12 @@ ul {
 
 .side_link_active:hover {
   color: burlywood;
+}
+
+.side_setting_logout {
+  margin-left: 10px;
+}
+
+#side_setting_logout {
+  margin-left: 10px;
 }

@@ -68,10 +68,10 @@ const SideBar = (props) => {
         </ul>
       </div>
       <div id="side_setting">
-        <div>
+        <div id="side_setting_set">
           <BtnSetting />
         </div>
-        <div>
+        <div id="side_setting_logout">
           <BtnLogout />
         </div>
       </div>
