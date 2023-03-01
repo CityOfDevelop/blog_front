@@ -2,9 +2,9 @@ import "./FeedList.css";
 import { Link } from "react-router-dom";
 
 const FeedList = (props) => {
-  const testData = props.testData;
-  const listItems = testData.map((item) => (
-    <li id={item.id} className="board_list_item" key={item.id}>
+  const feeds = props.feeds;
+  const listItems = feeds.map((item) => (
+    <li id={item.boardNo} className="board_list_item" key={item.boardNo}>
       {/* 여기에 쿼리스트링 하셔서 상세 */}
       <Link className="board_link" to="/">
         {/* 카테고리 추가할 공간? */}
@@ -14,8 +14,8 @@ const FeedList = (props) => {
             <span className="article_cntn">{item.cntn}</span>
           </div>
           <div className="post_append">
-            <span>댓글{item.commentCnt} / </span>
-            <span>{item.date}</span>
+            <span>댓글{item.replyCnt} / </span>
+            <span>{item.regDttm}</span>
           </div>
         </div>
         <div className="board_list_item_img">
