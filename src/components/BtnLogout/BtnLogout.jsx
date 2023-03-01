@@ -1,4 +1,4 @@
-import "./HeaderLogout.css";
+import "./BtnLogout.css";
 import { useNavigate } from "react-router-dom";
 
 const HeaderLogout = (props) => {
@@ -10,14 +10,11 @@ const HeaderLogout = (props) => {
   };
 
   return (
-    <div>
+    <>
       <button className="btn_logout" onClick={logout}>
         로그아웃
       </button>
-      <span className="header_nickname">
-        {localStorage.getItem("NICK_NAME")}
-      </span>
-    </div>
+    </>
   );
 };
 

@@ -6,6 +6,10 @@ import SignUp from "./pages/SignUp/SignUp";
 import SignUpCity from "./pages/SignUpCity/SignUpCity";
 import About from "./pages/About/About";
 import InfoBoard from "./pages/InfoBoard/InfoBoard";
+import BoardDetail from "./pages/BoardDetail/BoardDetail";
+import MyPage from "./pages/MyPage/MyPage";
+import MySetting from "./pages/MySetting/MySetting";
+import WriteBoard from "./pages/WriteBoard/WriteBoard";
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signup/devCity" element={<SignUpCity />} />
         <Route path="/infoBoard" element={<InfoBoard />} />
+        <Route path="/setting" element={<MySetting />} />
+        <Route path="/myPage" element={<MyPage />} />
+        {/* <Route path="/myBoard" element={<BoardDetail />} /> */}
+        <Route path="/writeBoard" element={<WriteBoard />} />
       </Routes>
     </div>
   );

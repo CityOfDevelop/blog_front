@@ -153,3 +153,8 @@ button:focus {
   transition-property: all;
   transition-duration: 0.7s;
 }
+
+.modal-dialog {
+  position: fixed;
+  top: 25%;
+}

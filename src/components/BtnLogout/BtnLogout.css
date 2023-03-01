@@ -1,17 +1,12 @@
 .btn_logout {
   width: 80px;
   height: 30px;
-  border: 1px solid #666;
+  color: #959595;
+  border: 1px solid #959595;
   border-radius: 16px;
   background: none;
 }
 
 .btn_logout:hover {
   cursor: pointer;
-}
-
-.header_nickname {
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 10px;
 }

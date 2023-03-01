@@ -1,0 +1,12 @@
+.btn_setting {
+  width: 80px;
+  height: 30px;
+  color: #959595;
+  border: 1px solid #959595;
+  border-radius: 16px;
+  background: none;
+}
+
+.btn_setting:hover {
+  cursor: pointer;
+}

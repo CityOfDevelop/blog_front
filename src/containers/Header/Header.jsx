@@ -2,8 +2,6 @@ import "./Header.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
-import HeaderLogin from "components/HeaderLogin/HeaderLogin";
-import HeaderLogout from "components/HeaderLogout/HeaderLogout";
 
 const Header = (props) => {
   const [ScrollY, setScrollY] = useState(0); // window 의 pageYOffset값을 저장
@@ -40,13 +38,7 @@ const Header = (props) => {
         </Link>
       </div>
       <div id="header_center">{props.name}</div>
-      <div id="header_right">
-        {localStorage.getItem("ACCESS_TOKEN") == "" ? (
-          <HeaderLogin />
-        ) : (
-          <HeaderLogout />
-        )}
-      </div>
+      <div id="header_right"></div>
     </header>
   );
 };
