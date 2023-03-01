@@ -1,6 +1,8 @@
 import "./FeedList.css";
 import { Link } from "react-router-dom";
 
+const tempImg = "/images/board/temp_img01.png";
+
 const FeedList = (props) => {
   const feeds = props.feeds;
   const listItems = feeds.map((item) => (
@@ -19,7 +21,8 @@ const FeedList = (props) => {
           </div>
         </div>
         <div className="board_list_item_img">
-          <img src={item.img} alt="게시판 이미지" />
+          {/* 임시 이미지 파일 setting */}
+          <img src={tempImg} alt="게시판 이미지" />
         </div>
       </Link>
     </li>
