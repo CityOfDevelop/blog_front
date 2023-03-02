@@ -6,16 +6,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const InfoBoard = () => {
-  const [active, setActive] = useState(false);
-
-  const sideOpen = () => {
-    setActive((active) => true);
-  };
-
-  const sideClose = () => {
-    setActive((active) => false);
-  };
-
   const [feeds, setfeeds] = useState([]);
 
   useEffect(() => {
@@ -34,8 +24,8 @@ const InfoBoard = () => {
 
   return (
     <div className="dc_wrap">
-      <Header sideOpen={sideOpen} name="정보게시판" />
-      <SideBar sideClose={sideClose} active={active} />
+      <Header name="정보게시판" />
+      <SideBar />
       <FeedList feeds={feeds} />
       {/* 나중에 리스트 데이터 생기면 조회한 리스트 데이터로 리스트 생성  */}
       <Beacon />

@@ -5,10 +5,20 @@ import BtnLogout from "components/BtnLogout/BtnLogout";
 import BtnLogin from "components/BtnLogin/BtnLogin";
 import BtnSetting from "components/BtnSetting/BtnSetting";
 import BtnWriteBoard from "components/BtnWriteBoard/BtnWriteBoard";
+import { closeSidebar } from "redux/reducers/sidebarStatus";
+import { useDispatch, useSelector } from "react-redux";
 
 const SideBar = (props) => {
+  const dispatch = useDispatch();
+
+  const closeSide = () => {
+    dispatch(closeSidebar());
+  };
+
+  const { sidebarStatus } = useSelector((state) => state.sidebarStatus);
+
   return (
-    <div id="side_wrap" className={props.active ? "open" : null}>
+    <div id="side_wrap" className={sidebarStatus ? "open" : null}>
       <div id="side_main">
         <div className="side_main_logo">로고</div>
         <div className="side_main_nick">
@@ -67,21 +77,21 @@ const SideBar = (props) => {
           </li>
         </ul>
       </div>
-               {localStorage.getItem("ACCESS_TOKEN") != "" ? (
-                  <div id="side_setting">
-                  <div id="side_setting_set">
-                    <BtnSetting />
-                  </div>
-                  <div id="side_setting_logout">
-                    <BtnLogout />
-                  </div>
-                </div>
-          ) : (
-            <div></div>
-          )}
+      {localStorage.getItem("ACCESS_TOKEN") != "" ? (
+        <div id="side_setting">
+          <div id="side_setting_set">
+            <BtnSetting />
+          </div>
+          <div id="side_setting_logout">
+            <BtnLogout />
+          </div>
+        </div>
+      ) : (
+        <div></div>
+      )}
 
-      <div id="side_close" className={props.active ? "open" : "close"}>
-        <button id="btn_side_close" onClick={props.sideClose}>
+      <div id="side_close" className={sidebarStatus ? "open" : "close"}>
+        <button id="btn_side_close" onClick={closeSide}>
           <IoChevronBackOutline className="icn_close" />
         </button>
       </div>

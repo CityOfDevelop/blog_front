@@ -2,10 +2,18 @@ import "./Header.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
+import { useDispatch } from "react-redux";
+import { openSidebar } from "redux/reducers/sidebarStatus";
 
 const Header = (props) => {
   const [ScrollY, setScrollY] = useState(0); // window 의 pageYOffset값을 저장
   const [ScrollActive, setScrollActive] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const openSide = () => {
+    dispatch(openSidebar());
+  };
 
   function handleScroll() {
     if (ScrollY > 80) {
@@ -30,7 +38,7 @@ const Header = (props) => {
   return (
     <header id="dc_head" className={ScrollActive ? "scroll_header" : ""}>
       <div id="header_left">
-        <button id="btn_sidebar_open" onClick={props.sideOpen}>
+        <button id="btn_sidebar_open" onClick={openSide}>
           <HiMenu id="icon_sidebar" />
         </button>
         <Link id="logo_home" to="/">

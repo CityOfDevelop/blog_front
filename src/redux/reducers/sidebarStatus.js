@@ -5,10 +5,10 @@
 const OPEN_SIDEBAR = "SIDEBAR/OPEN_SIDEBAR";
 const CLOSE_SIDEBAR = "SIDEBAR/CLOSE_SIDEBAR";
 
-const openSidebar = () => ({
+export const openSidebar = () => ({
   type: OPEN_SIDEBAR,
 });
-const closeSidebar = () => ({
+export const closeSidebar = () => ({
   type: CLOSE_SIDEBAR,
 });
 
@@ -17,7 +17,7 @@ const initalState = {
 };
 
 const sidebarStatus = (state = initalState, action) => {
-  console.log(action);
+  console.log(state);
   switch (action.type) {
     case OPEN_SIDEBAR:
       return {
