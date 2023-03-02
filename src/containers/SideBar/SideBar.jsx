@@ -15,11 +15,11 @@ const SideBar = (props) => {
           <span>{localStorage.getItem("NICK_NAME")}</span>
         </div>
         <div className="side_main_work">
-          {/* {localStorage.getItem("ACCESS_TOKEN") != "" ? (
+          {localStorage.getItem("ACCESS_TOKEN") != "" ? (
             <BtnWriteBoard />
           ) : (
             <BtnLogin />
-          )} */}
+          )}
         </div>
       </div>
       <div id="side_cate">
@@ -67,14 +67,19 @@ const SideBar = (props) => {
           </li>
         </ul>
       </div>
-      <div id="side_setting">
-        <div id="side_setting_set">
-          <BtnSetting />
-        </div>
-        <div id="side_setting_logout">
-          <BtnLogout />
-        </div>
-      </div>
+               {localStorage.getItem("ACCESS_TOKEN") != "" ? (
+                  <div id="side_setting">
+                  <div id="side_setting_set">
+                    <BtnSetting />
+                  </div>
+                  <div id="side_setting_logout">
+                    <BtnLogout />
+                  </div>
+                </div>
+          ) : (
+            <div></div>
+          )}
+
       <div id="side_close" className={props.active ? "open" : "close"}>
         <button id="btn_side_close" onClick={props.sideClose}>
           <IoChevronBackOutline className="icn_close" />
