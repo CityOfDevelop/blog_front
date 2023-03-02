@@ -6,6 +6,7 @@ import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import "./MyPage.css";
 import { useSelector } from "react-redux";
+import Calendar from "components/Calendar/Calendar";
 
 const InfoBoard = () => {
   const { sidebarStatus } = useSelector((state) => state.sidebarStatus);
@@ -20,7 +21,7 @@ const InfoBoard = () => {
           defaultActiveKey="home"
           transition={false}
           id="noanim-tab-example"
-          className="mb-3"
+          className="mb-0"
         >
           <Tab eventKey="home" title="정보">
             test1 {sidebarStatus}
@@ -29,7 +30,7 @@ const InfoBoard = () => {
             test2
           </Tab>
           <Tab eventKey="contact" title="스케줄">
-            test3
+            <Calendar />
           </Tab>
         </Tabs>
       </div>
