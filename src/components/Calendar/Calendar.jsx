@@ -5,6 +5,40 @@ import { useEffect } from "react";
 
 const Calendar = (props) => {
   const date = new Date();
+  const sampleData = [
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+  ];
   const makeCalendar = (date) => {
     const currentYear = new Date(date).getFullYear();
     const currentMonth = new Date(date).getMonth() + 1;
@@ -22,7 +56,8 @@ const Calendar = (props) => {
     }
 
     for (let i = 1; i <= lastDay; i++) {
-      htmlDummy += `<div class="item">${i}</div>`;
+      console.log(sampleData[i].dataDay);
+      htmlDummy += `<div class="item">${i}` + sampleData[i].cntn + `</div>`;
     }
 
     for (let i = limitDay; i < nextDay; i++) {
@@ -37,7 +72,6 @@ const Calendar = (props) => {
 
   // 이전달 이동
   const nextDay = () => {
-    console.log("next");
     makeCalendar(new Date(date.setMonth(date.getMonth() + 1)));
   };
 
@@ -49,7 +83,7 @@ const Calendar = (props) => {
   useEffect(() => {
     makeCalendar(date);
     return () => {};
-  }, []);
+  });
 
   return (
     <div className="rap">
@@ -57,6 +91,7 @@ const Calendar = (props) => {
         <button className="btn prevDay" onClick={prevDay}>
           <BsFillCaretLeftFill />
         </button>
+
         <h2 className="dateTitle"></h2>
 
         <button className="btn nextDay" onClick={nextDay}>

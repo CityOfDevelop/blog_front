@@ -1,5 +1,17 @@
+.dc_wrap {
+  min-width: 960px;
+}
+
 #tabs_wrap {
-    width: 960px;
-    height: 100vh;
-    margin: auto;
+  width: 960px;
+  height: 100vh;
+  margin: auto;
+}
+
+.nav-item > button {
+  color: black;
+}
+
+.nav-item > button .active {
+  color: burlywood;
 }
