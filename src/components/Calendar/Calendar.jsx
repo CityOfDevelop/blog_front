@@ -6,39 +6,162 @@ import { useEffect } from "react";
 const Calendar = (props) => {
   const date = new Date();
   const sampleData = [
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
-    { dataDay: "4", cntn: "빅데이터 분석기사 시험" },
+    {
+      dataDay: 1,
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: 2,
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: 3,
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "4",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "5",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "6",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "7",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+
+    {
+      dataDay: "11",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "12",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "13",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "14",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "15",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "16",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "17",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "18",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+
+    {
+      dataDay: "22",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "23",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "24",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+
+    {
+      dataDay: "28",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: "29",
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
+        { cntnNo: 2, cntn: "정보처리기사 시험" },
+      ],
+    },
+    {
+      dataDay: 30,
+      cntnList: [
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험123" },
+        { cntnNo: 2, cntn: "정보처리기사 시험123" },
+        { cntnNo: 2, cntn: "정보처리기사 시험123" },
+        { cntnNo: 2, cntn: "정보처리기사 시험123" },
+        { cntnNo: 2, cntn: "정보처리기사 시험123" },
+        { cntnNo: 2, cntn: "정보처리기사 시험123" },
+      ],
+    },
   ];
+
   const makeCalendar = (date) => {
     const currentYear = new Date(date).getFullYear();
     const currentMonth = new Date(date).getMonth() + 1;
@@ -52,16 +175,31 @@ const Calendar = (props) => {
     let htmlDummy = "";
 
     for (let i = 0; i < firstDay; i++) {
-      htmlDummy += `<div class="noColor"></div>`;
+      htmlDummy += `<div class="calendar_wrap noColor"></div>`;
     }
 
     for (let i = 1; i <= lastDay; i++) {
-      console.log(sampleData[i].dataDay);
-      htmlDummy += `<div class="item">${i}` + sampleData[i].cntn + `</div>`;
+      console.log("test" + i);
+      console.log(i);
+      const calendarDate = sampleData.findIndex(
+        (date123) => date123.dataDay == i
+      );
+
+      htmlDummy +=
+        `<div class="calendar_wrap item"><span class="calendar_date">${i}</span>` +
+        (calendarDate != -1
+          ? sampleData[calendarDate].cntnList
+              .map(
+                (item, index) =>
+                  "<span class='schd_list'>" + "- " + item.cntn + "</span>"
+              )
+              .join("")
+          : "") +
+        `</div>`;
     }
 
     for (let i = limitDay; i < nextDay; i++) {
-      htmlDummy += `<div class="noColor"></div>`;
+      htmlDummy += `<div class="calendar_wrap noColor"></div>`;
     }
 
     document.querySelector(`.dateBoard`).innerHTML = htmlDummy;
@@ -82,6 +220,7 @@ const Calendar = (props) => {
 
   useEffect(() => {
     makeCalendar(date);
+
     return () => {};
   });
 

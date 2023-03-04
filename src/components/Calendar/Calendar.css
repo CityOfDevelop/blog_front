@@ -6,6 +6,22 @@
   border-radius: 5px;
 }
 
+.calendar_wrap {
+  width: 132px;
+  height: 96px;
+}
+
+.calendar_wrap > span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.schd_list {
+  font-size: 12px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -29,6 +45,15 @@
 
 .noColor {
   background-color: #eee;
+}
+
+.calendar_date {
+  margin-bottom: 5px;
+}
+
+.item {
+  line-height: 20px;
+  overflow: hidden;
 }
 
 .item:hover {
