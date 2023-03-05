@@ -1,10 +1,10 @@
-.grid {
+.grid_crtf {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 40px;
 }
 
-.grid div {
+.grid_crtf div {
   padding: 0.8rem;
   font-size: 0.9rem;
   cursor: pointer;

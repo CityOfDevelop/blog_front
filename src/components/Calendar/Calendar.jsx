@@ -235,7 +235,7 @@ const Calendar = (props) => {
         </button>
       </div>
 
-      <div className="grid dateHead">
+      <div className="grid_calendar dateHead">
         <div>일</div>
         <div>월</div>
         <div>화</div>
@@ -245,7 +245,7 @@ const Calendar = (props) => {
         <div>토</div>
       </div>
 
-      <div className="grid dateBoard"></div>
+      <div className="grid_calendar dateBoard"></div>
     </div>
   );
 };

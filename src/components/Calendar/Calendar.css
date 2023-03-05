@@ -22,13 +22,13 @@
   font-size: 12px;
 }
 
-.grid {
+.grid_calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 5px;
 }
 
-.grid div {
+.grid_calendar div {
   padding: 0.6rem;
   font-size: 0.9rem;
   cursor: pointer;
