@@ -37,6 +37,8 @@
 /* 자격증 부분 */
 .dash_crtf {
   width: 960px;
-  height: 250px;
+  height: 200px;
   margin-top: 50px;
+  margin-bottom: 50px;
+  overflow-y: auto;
 }

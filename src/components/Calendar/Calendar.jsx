@@ -1,6 +1,5 @@
 import "./Calendar.css";
 import { BsFillCaretRightFill, BsFillCaretLeftFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const Calendar = (props) => {

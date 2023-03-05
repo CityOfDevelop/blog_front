@@ -16,7 +16,7 @@ const DashBoard = () => {
         </div>
       </div>
 
-      <div className="dash_crtf dash_bg">
+      <div className="dash_crtf close dash_bg">
         <GridCrtf />
       </div>
     </div>
