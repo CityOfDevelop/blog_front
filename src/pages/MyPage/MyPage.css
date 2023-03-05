@@ -12,6 +12,10 @@
   color: black;
 }
 
+.nav-item > button:hover {
+  color: burlywood;
+}
+
 .nav-item > button .active {
   color: burlywood;
 }

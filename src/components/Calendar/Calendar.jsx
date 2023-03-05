@@ -179,8 +179,6 @@ const Calendar = (props) => {
     }
 
     for (let i = 1; i <= lastDay; i++) {
-      console.log("test" + i);
-      console.log(i);
       const calendarDate = sampleData.findIndex(
         (date123) => date123.dataDay == i
       );

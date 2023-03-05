@@ -10,6 +10,8 @@ import Calendar from "components/Calendar/Calendar";
 import FeedList from "components/FeedList/FeedList";
 import { useEffect } from "react";
 import axios from "axios";
+import PieChart from "components/PieChart/PieChart";
+import DashBoard from "containers/DashBoard/DashBoard";
 
 const MyPage = () => {
   const { sidebarStatus } = useSelector((state) => state.sidebarStatus);
@@ -41,7 +43,7 @@ const MyPage = () => {
           className="mb-0"
         >
           <Tab eventKey="home" title="정보">
-            test1
+            <DashBoard />
           </Tab>
           <Tab eventKey="profile" title="게시물">
             <FeedList feeds={feeds} />
