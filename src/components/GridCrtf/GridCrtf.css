@@ -1,7 +1,8 @@
 .grid_crtf {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 40px;
+  grid-gap: 20px;
+  padding: 5px;
 }
 
 .grid_crtf div {
@@ -9,5 +10,8 @@
   font-size: 0.9rem;
   cursor: pointer;
   text-align: center;
-  border: 1px solid black;
+}
+
+.grid_crtf_item {
+  border: 1.5px solid white;
 }

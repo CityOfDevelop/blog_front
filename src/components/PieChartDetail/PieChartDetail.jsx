@@ -1,6 +1,6 @@
 import "./PieChartDetail.css";
 
-const PieChartDetail = () => {
+const PieChartDetail = (props) => {
   return <div>차트상세</div>;
 };
 

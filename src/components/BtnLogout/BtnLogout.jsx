@@ -5,8 +5,8 @@ const HeaderLogout = (props) => {
   const navigate = useNavigate();
 
   const logout = () => {
-    localStorage.setItem("ACCESS_TOKEN", "");
-    navigate("/login");
+    localStorage.clear();
+    navigate("/");
   };
 
   return (

@@ -25,10 +25,10 @@ const SideBar = (props) => {
           <span>{localStorage.getItem("NICK_NAME")}</span>
         </div>
         <div className="side_main_work">
-          {localStorage.getItem("ACCESS_TOKEN") != "" ? (
-            <BtnWriteBoard />
-          ) : (
+          {localStorage.getItem("ACCESS_TOKEN") == null ? (
             <BtnLogin />
+          ) : (
+            <BtnWriteBoard />
           )}
         </div>
       </div>
@@ -77,7 +77,9 @@ const SideBar = (props) => {
           </li>
         </ul>
       </div>
-      {localStorage.getItem("ACCESS_TOKEN") != "" ? (
+      {localStorage.getItem("ACCESS_TOKEN") == null ? (
+        ""
+      ) : (
         <div id="side_setting">
           <div id="side_setting_set">
             <BtnSetting />
@@ -86,8 +88,6 @@ const SideBar = (props) => {
             <BtnLogout />
           </div>
         </div>
-      ) : (
-        <div></div>
       )}
 
       <div id="side_close" className={sidebarStatus ? "open" : "close"}>
