@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+cd + 스페이스바 + 탭 -> cd .\blog_front\
 ### `npm install`
 
 ## Available Scripts
