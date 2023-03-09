@@ -2,7 +2,6 @@ import Header from "containers/Header/Header";
 import Beacon from "containers/Beacon/Beacon";
 import "./Home.css";
 import SideBar from "containers/SideBar/SideBar";
-import { useState } from "react";
 
 const Home = () => {
   return (

@@ -1,13 +1,14 @@
 import "./Calendar.css";
 import { BsFillCaretRightFill, BsFillCaretLeftFill } from "react-icons/bs";
 import { useEffect } from "react";
+import { lpad } from "utils/common_utils";
 
 const Calendar = (props) => {
   const date = new Date();
   const tempDate = new Date();
   const sampleData = [
     {
-      dataDay: 1,
+      dataDay: "2023-03-01",
       cntnList: [
         { cntnNo: 1, cntn: "빅데이터 분석기사 시험", color: "red" },
         { cntnNo: 2, cntn: "정보처리기사 시험", color: "blue" },
@@ -16,7 +17,7 @@ const Calendar = (props) => {
       ],
     },
     {
-      dataDay: 2,
+      dataDay: "2023-03-05",
       cntnList: [
         { cntnNo: 1, cntn: "빅데이터 분석기사 시험", color: "" },
         { cntnNo: 2, cntn: "정보처리기사 시험", color: "burlywood" },
@@ -25,7 +26,7 @@ const Calendar = (props) => {
       ],
     },
     {
-      dataDay: 3,
+      dataDay: "2023-03-16",
       cntnList: [
         { cntnNo: 1, cntn: "빅데이터 분석기사 시험", color: "" },
         { cntnNo: 2, cntn: "정보처리기사 시험", color: "" },
@@ -35,7 +36,7 @@ const Calendar = (props) => {
     },
 
     {
-      dataDay: 4,
+      dataDay: "2023-03-18",
       cntnList: [
         { cntnNo: 1, cntn: "빅데이터 분석기사 시험", color: "red" },
         { cntnNo: 2, cntn: "정보처리기사 시험", color: "" },
@@ -64,8 +65,22 @@ const Calendar = (props) => {
     }
 
     for (let i = 1; i <= lastDay; i++) {
+      console.log("테스트2");
+      console.log(
+        date.getFullYear() +
+          "-" +
+          lpad(date.getMonth() + 1, 2, "0") +
+          "-" +
+          lpad(i, 2, "0")
+      );
       const calendarDate = sampleData.findIndex(
-        (date123) => date123.dataDay == i
+        (date123) =>
+          date123.dataDay ==
+          date.getFullYear() +
+            "-" +
+            lpad(date.getMonth() + 1, 2, "0") +
+            "-" +
+            lpad(i, 2, "0")
       );
 
       htmlDummy +=

@@ -2,8 +2,7 @@ import { useDispatch } from "react-redux";
 import { closeSidebar } from "redux/reducers/sidebarStatus";
 
 export const com_cf_closeSidebar = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    dispatch(closeSidebar());
-}
-
+  dispatch(closeSidebar());
+};
