@@ -9,155 +9,38 @@ const Calendar = (props) => {
     {
       dataDay: 1,
       cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험", color: "red" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "blue" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "burlywood" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "burlywood" },
       ],
     },
     {
       dataDay: 2,
       cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험", color: "" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "burlywood" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "burlywood" },
       ],
     },
     {
       dataDay: 3,
       cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "4",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "5",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "6",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "7",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험", color: "" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "blue" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "" },
       ],
     },
 
     {
-      dataDay: "11",
+      dataDay: 4,
       cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "12",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "13",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "14",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "15",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "16",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "17",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "18",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-
-    {
-      dataDay: "22",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "23",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "24",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-
-    {
-      dataDay: "28",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: "29",
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험" },
-        { cntnNo: 2, cntn: "정보처리기사 시험" },
-      ],
-    },
-    {
-      dataDay: 30,
-      cntnList: [
-        { cntnNo: 1, cntn: "빅데이터 분석기사 시험123" },
-        { cntnNo: 2, cntn: "정보처리기사 시험123" },
-        { cntnNo: 2, cntn: "정보처리기사 시험123" },
-        { cntnNo: 2, cntn: "정보처리기사 시험123" },
-        { cntnNo: 2, cntn: "정보처리기사 시험123" },
-        { cntnNo: 2, cntn: "정보처리기사 시험123" },
+        { cntnNo: 1, cntn: "빅데이터 분석기사 시험", color: "red" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "red" },
+        { cntnNo: 2, cntn: "정보처리기사 시험", color: "" },
       ],
     },
   ];
@@ -195,7 +78,11 @@ const Calendar = (props) => {
           ? sampleData[calendarDate].cntnList
               .map(
                 (item, index) =>
-                  "<span class='schd_list'>" + "- " + item.cntn + "</span>"
+                  "<span class='schd_list" +
+                  (item.color ? " schd_list_color_" + item.color : "") +
+                  "'>" +
+                  item.cntn +
+                  "</span>"
               )
               .join("")
           : "") +
