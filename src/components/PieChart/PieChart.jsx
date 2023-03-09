@@ -10,6 +10,7 @@ const PieChart = (props) => {
     ["JavaScript", 7],
     ["MySQL", 6],
     ["React", 5],
+    ["Ect", 5],
   ];
 
   const options = {

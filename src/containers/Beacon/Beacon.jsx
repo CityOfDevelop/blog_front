@@ -33,7 +33,12 @@ const SideBar = () => {
 
   function MydModalWithGrid(props) {
     return (
-      <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
+      <Modal
+        size="lg"
+        dialogClassName="modal-90w"
+        {...props}
+        aria-labelledby="contained-modal-title-vcenter"
+      >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             스케줄 등록
@@ -67,6 +72,20 @@ const SideBar = () => {
               </Col>
               <Col xs={12} md={10}>
                 <textarea></textarea>
+              </Col>
+            </Row>
+            <Row id="row_schd_button">
+              <Col id="col_schd_button" xs={12} md={12}>
+                <div id="schd_button_wrap">
+                  <button
+                    className="schd_button"
+                    variant="primary"
+                    type="submit"
+                  >
+                    등록 하기
+                  </button>
+                  <div className="schd_button_back"></div>
+                </div>
               </Col>
             </Row>
           </Container>

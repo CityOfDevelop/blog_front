@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 const Calendar = (props) => {
   const date = new Date();
+  const tempDate = new Date();
   const sampleData = [
     {
       dataDay: 1,
@@ -164,6 +165,8 @@ const Calendar = (props) => {
   const makeCalendar = (date) => {
     const currentYear = new Date(date).getFullYear();
     const currentMonth = new Date(date).getMonth() + 1;
+    const currentDay = new Date().getDate();
+    const temp = currentYear + "-" + currentMonth + "-" + currentDay;
 
     const firstDay = new Date(date.setDate(1)).getDay();
     const lastDay = new Date(currentYear, currentMonth, 0).getDate();
@@ -183,7 +186,11 @@ const Calendar = (props) => {
       );
 
       htmlDummy +=
-        `<div class="calendar_wrap item"><span class="calendar_date">${i}</span>` +
+        `<div class="calendar_wrap item">` +
+        (temp ==
+        tempDate.getFullYear() + "-" + (tempDate.getMonth() + 1) + "-" + i
+          ? `<span class="calendar_date calendar_today">${i}</span>`
+          : `<span class="calendar_date">${i}</span>`) +
         (calendarDate != -1
           ? sampleData[calendarDate].cntnList
               .map(

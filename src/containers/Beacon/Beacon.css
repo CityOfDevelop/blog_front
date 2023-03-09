@@ -156,5 +156,63 @@ button:focus {
 
 .modal-dialog {
   position: fixed;
-  top: 25%;
+  top: 15%;
+}
+
+.modal-content {
+  height: 600px;
+}
+
+#schd_modal_wrap {
+}
+
+/* 버튼 */
+#schd_button_wrap {
+  width: 350px;
+  height: 55px;
+  margin-top: 18px;
+  border-radius: 7px;
+  position: relative;
+}
+
+.schd_button_back {
+  width: 350px;
+  height: 48px;
+  background-color: burlywood;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  border-radius: 7px;
+}
+
+.schd_button {
+  position: absolute;
+  top: 0;
+  width: 350px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background-color: burlywood;
+  color: white;
+  box-shadow: 0 0.8rem 1.6rem 0 rgb(143 0 255 / 13%);
+  font-weight: 700;
+  z-index: 999;
+}
+
+.schd_button:hover {
+  background-color: burlywood;
+  transform: translateY(5px);
+  transition: 0.1s;
+  z-index: 999;
+}
+
+#row_schd_button {
+  width: 740px;
+  height: 200px;
+  align-items: end;
+}
+
+#col_schd_button {
+  justify-content: center;
 }
