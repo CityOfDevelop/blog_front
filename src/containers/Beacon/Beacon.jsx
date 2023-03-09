@@ -12,6 +12,7 @@ import Container from "react-bootstrap/Container";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
+import { com_cf_closeSidebar } from "utils";
 
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,8 @@ const SideBar = () => {
   const today = dateNow.toISOString().slice(0, 10);
 
   function MydModalWithGrid(props) {
+    com_cf_closeSidebar()
+
     return (
       <Modal
         size="lg"
