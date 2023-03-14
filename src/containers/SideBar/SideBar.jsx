@@ -49,7 +49,7 @@ const SideBar = (props) => {
               className={({ isActive }) =>
                 "side_link" + (isActive ? "_active" : "")
               }
-              to="/MyBoard"
+              to="/myBoard"
             >
               나의 게시물
             </NavLink>
