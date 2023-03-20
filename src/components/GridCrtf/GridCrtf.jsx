@@ -1,30 +1,17 @@
 import { useEffect } from "react";
 import "./GridCrtf.css";
 
-const GridCrtf = () => {
-  const sampleCrftData = [
-    { crftName: "정보처리기사" },
-    { crftName: "빅데이터 분석기사" },
-    { crftName: "SQLD" },
-    { crftName: "컴활 1급" },
-    { crftName: "SQLP" },
-    { crftName: "정보처리기사" },
-    { crftName: "빅데이터 분석기사" },
-    { crftName: "SQLD" },
-    { crftName: "컴활 1급" },
-    { crftName: "SQLP" },
-    { crftName: "정보처리기사" },
-    { crftName: "빅데이터 분석기사" },
-    { crftName: "SQLD" },
-    { crftName: "컴활 1급" },
-    { crftName: "SQLP" },
-  ];
+const GridCrtf = (props) => {
+  
+  console.log(props);
+
+  const sampleCrftData = props.info.ctfeId.split(',');
 
   const makeGridCrtfSlide = () => {
     let htmlDummy2 = "";
 
     for (let i = 0; i < sampleCrftData.length; i++) {
-      htmlDummy2 += `<div class="grid_crtf_item">${sampleCrftData[i].crftName}</div>`;
+      htmlDummy2 += `<div class="grid_crtf_item">${sampleCrftData[i]}</div>`;
     }
 
     document.getElementById("grid_crtf_list").innerHTML = htmlDummy2;
