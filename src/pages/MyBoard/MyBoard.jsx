@@ -7,7 +7,7 @@ import axios from "axios";
 
 const MyBoard = () => {
   const [feeds, setfeeds] = useState([]);
-
+  //{localStorage.getItem("NICK_NAME")}
   useEffect(() => {
     axios
       .get("http://localhost:8080/myFeedlist")

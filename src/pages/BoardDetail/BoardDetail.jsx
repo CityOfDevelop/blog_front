@@ -12,12 +12,12 @@ const BoardDetail = () => {
     const {id} = useParams();
     const [results, setResults] = useState({});
 
-    useEffect(() => {
+    const retrieveBoardDetail = () => {
         axios
         .get(`http://localhost:8080/detail/${id}`)
           .then((Response) => {
-            console.log(Response.data);
-            setResults(Response.data);
+              setResults(Response.data);
+              console.log(Response.data);
             if (Response.status == "200" && Response.data != "") {
             } else {
                 setResults("");
@@ -25,7 +25,12 @@ const BoardDetail = () => {
             }
           })
           .catch((error) => console.log(error));
-        });
+          return()=>{
+          };
+        };
+
+    useEffect(() =>  retrieveBoardDetail,[]);// 변경된 id로만 실행 후, 종료!!
+
 return (
     <div className="dc_wrap">
       <Header name="상세" />
